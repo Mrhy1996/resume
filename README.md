@@ -7,7 +7,7 @@
 3. resume-gateway 网关
 4. resume-common 常用的工具包
 ## 技术栈
-springcloudalibaba
-nacos
-redis
-mysql
+1. springCloudAlibaba
+2. nacos
+3. redis
+4. mysql
