@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mrhy.resumeserver.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mrhy.resumeserver.entity.User">
+        <id column="id" property="id" />
+        <result column="account" property="account" />
+        <result column="password" property="password" />
+        <result column="phone" property="phone" />
+        <result column="email" property="email" />
+        <result column="user_header" property="userHeader" />
+        <result column="insert_time" property="insertTime" />
+        <result column="last_update_time" property="lastUpdateTime" />
+        <result column="last_update_user" property="lastUpdateUser" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, account, password, phone, email, user_header, insert_time, last_update_time, last_update_user
+    </sql>
+
+</mapper>
