@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class ResumeList implements Serializable {
+public class ResumeEducation implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -25,24 +25,34 @@ public class ResumeList implements Serializable {
     private Integer id;
 
     /**
-     * 账号id
+     * 简历列表id
      */
-    private Integer userId;
+    private Integer resumeListId;
 
     /**
-     * 简历名称
+     * 学校
      */
-    private String name;
+    private String school;
 
     /**
-     * 标签
+     * 专业
      */
-    private String tag;
+    private String major;
 
     /**
-     * 删除状态 0删除 1未删除
+     * 学历
      */
-    private Integer deleteStatus;
+    private String qualifications;
+
+    /**
+     * 开始时间
+     */
+    private LocalDateTime from;
+
+    /**
+     * 结束时间
+     */
+    private LocalDateTime to;
 
     /**
      * 插入时间

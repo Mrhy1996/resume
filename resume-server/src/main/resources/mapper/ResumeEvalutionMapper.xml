@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mrhy.resumeserver.mapper.ResumeEvalutionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mrhy.resumeserver.entity.ResumeEvalution">
+        <id column="id" property="id" />
+        <result column="resume_list_id" property="resumeListId" />
+        <result column="evaluation" property="evaluation" />
+        <result column="insert_time" property="insertTime" />
+        <result column="last_update_time" property="lastUpdateTime" />
+        <result column="last_update_user" property="lastUpdateUser" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, resume_list_id, evaluation, insert_time, last_update_time, last_update_user
+    </sql>
+
+</mapper>

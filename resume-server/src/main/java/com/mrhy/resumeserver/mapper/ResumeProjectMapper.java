@@ -1,6 +1,6 @@
 package com.mrhy.resumeserver.mapper;
 
-import com.mrhy.resumeserver.entity.ResumeList;
+import com.mrhy.resumeserver.entity.ResumeProject;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author mrhy
  * @since 2020-12-25
  */
-public interface ResumeListMapper extends BaseMapper<ResumeList> {
+public interface ResumeProjectMapper extends BaseMapper<ResumeProject> {
 
 }

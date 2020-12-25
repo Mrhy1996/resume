@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author mrhy
- * @since 2020-12-23
+ * @since 2020-12-25
  */
 @Service
 public class ResumeListServiceImpl extends ServiceImpl<ResumeListMapper, ResumeList> implements IResumeListService {

@@ -3,6 +3,7 @@ package com.mrhy.resumeserver.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
+import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,7 +18,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class ResumeList implements Serializable {
+public class ResumeBasic implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -25,24 +26,47 @@ public class ResumeList implements Serializable {
     private Integer id;
 
     /**
-     * 账号id
+     * 列表中的id
      */
-    private Integer userId;
+    private Integer resumeListId;
 
     /**
-     * 简历名称
+     * 角色编码
      */
     private String name;
 
     /**
-     * 标签
+     * 菜单编码
      */
-    private String tag;
+    private String sex;
 
     /**
-     * 删除状态 0删除 1未删除
+     * 出生日期
      */
-    private Integer deleteStatus;
+    private LocalDateTime birthday;
+
+    /**
+     * 户籍所在地
+     */
+    @TableField("nativePlace")
+    private String nativePlace;
+
+    /**
+     * 手机号码前缀
+     */
+    @TableField("phoneNumberPrefix")
+    private String phoneNumberPrefix;
+
+    /**
+     * 联系方式
+     */
+    @TableField("phoneNumber")
+    private String phoneNumber;
+
+    /**
+     * 邮箱
+     */
+    private String email;
 
     /**
      * 插入时间

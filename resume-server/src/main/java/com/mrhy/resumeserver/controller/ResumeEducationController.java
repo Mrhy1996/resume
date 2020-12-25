@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-12-25
  */
 @RestController
-@RequestMapping("/resume-list")
-public class ResumeListController {
+@RequestMapping("/resume-education")
+public class ResumeEducationController {
 
 }
 
