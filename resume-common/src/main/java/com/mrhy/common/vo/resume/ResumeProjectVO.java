@@ -1,11 +1,10 @@
-package com.mrhy.resumeserver.entity;
+package com.mrhy.common.vo.resume;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -17,11 +16,10 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class ResumeEvalution implements Serializable {
+public class ResumeProjectVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -30,9 +28,29 @@ public class ResumeEvalution implements Serializable {
     private Integer resumeListId;
 
     /**
-     * 自我评价
+     * 项目名称
      */
-    private String evaluation;
+    private String projectName;
+
+    /**
+     * 角色
+     */
+    private String role;
+
+    /**
+     * 项目简介
+     */
+    private String projectIntroduce;
+
+    /**
+     * 开始时间
+     */
+    private LocalDateTime from;
+
+    /**
+     * 结束时间
+     */
+    private LocalDateTime to;
 
     /**
      * 插入时间

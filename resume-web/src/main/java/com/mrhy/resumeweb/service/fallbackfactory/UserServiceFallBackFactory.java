@@ -2,8 +2,8 @@ package com.mrhy.resumeweb.service.fallbackfactory;
 
 import com.mrhy.common.ObjectResponse;
 import com.mrhy.common.OperationFlag;
-import com.mrhy.common.vo.UserLoginVO;
-import com.mrhy.common.vo.UserVO;
+import com.mrhy.common.vo.user.UserLoginVO;
+import com.mrhy.common.vo.user.UserVO;
 import com.mrhy.resumeweb.service.IUserService;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.log4j.Log4j2;

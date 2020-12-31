@@ -8,9 +8,9 @@ package com.mrhy.common.enums;
  * Copyright (C), 2018-2020
  */
 public enum RoleEnum {
-    ADMIN("A100020001", "管理员"),
-    USER("A100020002", "普通用户"),
-    PASSENGER("A100020003", "游客"),
+    ADMIN("A100030001", "管理员"),
+    USER("A100030002", "普通用户"),
+    PASSENGER("A100030003", "游客"),
     ;
     private final String itemCode;
     private final String itemName;

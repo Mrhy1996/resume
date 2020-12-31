@@ -1,4 +1,4 @@
-package com.mrhy.common.vo;
+package com.mrhy.common.vo.user;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
  * Copyright (C), 2018-2020
  */
 @Data
-@ApiModel
+@ApiModel(description = "用户登录")
 public class UserLoginVO {
     @ApiModelProperty("账户")
     @Size(max = 20, message = "账户不能超过20位")

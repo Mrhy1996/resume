@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.validation.ConstraintViolationException;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -50,7 +51,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public ObjectResponse illegalArgumentExceptionHandler(IllegalArgumentException e) {
         log.error("参数不合法", e);
-        return new ObjectResponse(OperationFlag.ILLEGAL_ARGUMENT.getReturnCode(), "传参不正确:" + e.getMessage());
+        return new ObjectResponse(OperationFlag.ILLEGAL_ARGUMENT.getReturnCode(), e.getMessage());
     }
 
     /**
@@ -91,5 +92,23 @@ public class GlobalExceptionHandler {
         return new ObjectResponse(OperationFlag.ILLEGAL_ARGUMENT.getReturnCode(), e.getMessage());
     }
 
+    /**
+     * 捕捉sql异常
+     */
+    @ExceptionHandler({SQLException.class})
+    @ResponseBody
+    public ObjectResponse sqlExceptionHandler(SQLException e) {
+        log.error("sql有错误", e);
+        return new ObjectResponse(OperationFlag.FAIL.getReturnCode(), OperationFlag.FAIL.getDescription());
+    }
+    /**
+     * 捕捉sql异常
+     */
+    @ExceptionHandler({Exception.class})
+    @ResponseBody
+    public ObjectResponse exceptionHandler(Exception e) {
+        log.error("其他异常", e);
+        return new ObjectResponse(OperationFlag.FAIL.getReturnCode(), OperationFlag.FAIL.getDescription());
+    }
 
 }

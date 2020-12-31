@@ -1,4 +1,4 @@
-package com.mrhy.common.vo;
+package com.mrhy.common.vo.user;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -15,7 +15,7 @@ import java.io.Serializable;
  * Copyright (C), 2018-2020
  */
 @Data
-@ApiModel("用户")
+@ApiModel(description = "用户注册")
 public class UserVO implements Serializable {
     @ApiModelProperty("账号")
     @Size(max = 20, message = "账户不能超过20位")

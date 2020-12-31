@@ -1,14 +1,12 @@
 package com.mrhy.resumeweb.service;
 
 import com.mrhy.common.ObjectResponse;
-import com.mrhy.common.vo.UserLoginVO;
-import com.mrhy.common.vo.UserVO;
+import com.mrhy.common.vo.user.UserLoginVO;
+import com.mrhy.common.vo.user.UserVO;
 import com.mrhy.resumeweb.service.fallbackfactory.UserServiceFallBackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 用户service

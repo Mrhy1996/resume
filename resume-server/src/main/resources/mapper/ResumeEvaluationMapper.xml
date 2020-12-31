@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mrhy.resumeserver.mapper.ResumeEvalutionMapper">
+<mapper namespace="com.mrhy.resumeserver.mapper.ResumeEvaluationMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.mrhy.resumeserver.entity.ResumeEvalution">
+    <resultMap id="BaseResultMap" type="com.mrhy.resumeserver.entity.ResumeEvaluation">
         <id column="id" property="id" />
         <result column="resume_list_id" property="resumeListId" />
         <result column="evaluation" property="evaluation" />

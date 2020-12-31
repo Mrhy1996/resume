@@ -1,8 +1,8 @@
 package com.mrhy.resumeweb.controller;
 
 import com.mrhy.common.ObjectResponse;
-import com.mrhy.common.vo.UserLoginVO;
-import com.mrhy.common.vo.UserVO;
+import com.mrhy.common.vo.user.UserLoginVO;
+import com.mrhy.common.vo.user.UserVO;
 import com.mrhy.resumeweb.service.IUserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

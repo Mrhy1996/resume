@@ -1,6 +1,6 @@
 package com.mrhy.resumeserver.mapper;
 
-import com.mrhy.resumeserver.entity.ResumeEvalution;
+import com.mrhy.resumeserver.entity.ResumeEvaluation;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author mrhy
- * @since 2020-12-25
+ * @since 2020-12-30
  */
-public interface ResumeEvalutionMapper extends BaseMapper<ResumeEvalution> {
+public interface ResumeEvaluationMapper extends BaseMapper<ResumeEvaluation> {
 
 }

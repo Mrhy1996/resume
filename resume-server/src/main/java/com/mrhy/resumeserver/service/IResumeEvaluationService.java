@@ -1,6 +1,6 @@
 package com.mrhy.resumeserver.service;
 
-import com.mrhy.resumeserver.entity.ResumeEvalution;
+import com.mrhy.resumeserver.entity.ResumeEvaluation;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author mrhy
- * @since 2020-12-25
+ * @since 2020-12-30
  */
-public interface IResumeEvalutionService extends IService<ResumeEvalution> {
+public interface IResumeEvaluationService extends IService<ResumeEvaluation> {
 
 }

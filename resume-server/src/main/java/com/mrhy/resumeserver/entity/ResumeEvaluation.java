@@ -13,11 +13,11 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author mrhy
- * @since 2020-12-25
+ * @since 2020-12-30
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class ResumeBasic implements Serializable {
+public class ResumeEvaluation implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -25,44 +25,14 @@ public class ResumeBasic implements Serializable {
     private Integer id;
 
     /**
-     * 列表中的id
+     * 简历列表id
      */
     private Integer resumeListId;
 
     /**
-     * 角色编码
+     * 自我评价
      */
-    private String name;
-
-    /**
-     * 菜单编码
-     */
-    private String sex;
-
-    /**
-     * 出生日期
-     */
-    private LocalDateTime birthday;
-
-    /**
-     * 户籍所在地
-     */
-    private String nativePlace;
-
-    /**
-     * 手机号码前缀
-     */
-    private String phoneNumberPrefix;
-
-    /**
-     * 联系方式
-     */
-    private String phoneNumber;
-
-    /**
-     * 邮箱
-     */
-    private String email;
+    private String evaluation;
 
     /**
      * 插入时间

@@ -1,7 +1,7 @@
 package com.mrhy.resumeserver.service;
 
-import com.mrhy.common.vo.UserLoginVO;
-import com.mrhy.common.vo.UserVO;
+import com.mrhy.common.vo.user.UserLoginVO;
+import com.mrhy.common.vo.user.UserVO;
 import com.mrhy.resumeserver.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
