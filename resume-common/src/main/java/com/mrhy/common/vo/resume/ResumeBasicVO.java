@@ -1,5 +1,6 @@
 package com.mrhy.common.vo.resume;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -65,11 +66,13 @@ public class ResumeBasicVO implements Serializable {
     /**
      * 插入时间
      */
+    @JsonIgnore
     private LocalDateTime insertTime;
 
     /**
      * 更新时间
      */
+    @JsonIgnore
     private LocalDateTime lastUpdateTime;
 
     /**

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- log4j2配置文件与log4j(1.x版本)有很大不同 -->
+<!-- status 日志级别, TRACE < DEBUG < INFO < WARN < ERROR < FATAL -->
+<!-- monitorInterval 每隔300秒重新读取配置文件, 可以不重启应用的情况下修改配置 -->
+<Configuration status="DEBUG" monitorInterval="300">
+    <Properties>
+        <property name="LOG_PATH">/Users/mrhy/app/resumeServer/logs</property>
+        <Property name="LOG_LAYOUT">%-5p [%d{yyyy-MM-dd HH:mm:ss}] %t [%c:%L] - %m%n</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- 控制台 -->
+        <Console name="console" target="SYSTEM_OUT">
+            <encoder>
+                <!--字符编码-->
+                <charset>UTF-8</charset><!--此处设置字符集-->
+            </encoder>
+            <PatternLayout pattern="${LOG_LAYOUT}" />
+        </Console>
+
+        <RollingFile name="file_root" fileName="${LOG_PATH}/root.log"
+                     filePattern="${LOG_PATH}/$${date:yyyy-MM-dd}/root-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <Pattern>${LOG_LAYOUT}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <!-- 指定当文件体积大于size指定的值时, 触发Rolling -->
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="file_springframework" fileName="${LOG_PATH}/springframework.log"
+                     filePattern="${LOG_PATH}/$${date:yyyy-MM-dd}/springframework-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <Pattern>${LOG_LAYOUT}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="file_project" fileName="${LOG_PATH}/project.log"
+                     filePattern="${LOG_PATH}/$${date:yyyy-MM-dd}/project-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <Pattern>${LOG_LAYOUT}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.mrhy.resumeserver" level="DEBUG" additivity="false">
+            <AppenderRef ref="file_project" />
+            <AppenderRef ref="console" />
+        </Logger>
+        <Logger name="org.springframework" level="ERROR" additivity="false">
+            <AppenderRef ref="file_springframework" />
+            <AppenderRef ref="console" />
+        </Logger>
+
+        <Root level="ERROR">
+            <AppenderRef ref="file_root" />
+            <AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>

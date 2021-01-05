@@ -47,12 +47,12 @@ public class ResumeProject implements Serializable {
     /**
      * 开始时间
      */
-    private LocalDateTime from;
+    private LocalDateTime startTime;
 
     /**
      * 结束时间
      */
-    private LocalDateTime to;
+    private LocalDateTime endTime;
 
     /**
      * 插入时间

@@ -2,6 +2,7 @@ package com.mrhy.resumeserver.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
@@ -11,7 +12,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author mrhy
@@ -41,6 +42,9 @@ public class ResumeList implements Serializable {
      */
     private String tag;
 
+
+    private String uuid;
+
     /**
      * 删除状态 0删除 1未删除
      */
@@ -49,7 +53,7 @@ public class ResumeList implements Serializable {
     /**
      * 插入时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime insertTime;
 
     /**
